@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/classes.jar"
+        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/pre-dexed/debug/classes-0e23a1a56792d4b4eafaca39a075a4b912f82be6.jar" />
+        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\classes-768bad02086217cdc546ac5fbd6e3ba2700773a9.jar" />
     </item>
     <item
-        jar="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars/libs/internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-c67f2c6b7f5eac1f27d0a6dccfe69602279ec22c.jar" />
-    </item>
-    <item
-        jar="/Users/souriya/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-5241fdd6f07b22e6d0ef777ced6ad6f99f578b36.jar" />
-    </item>
-    <item
-        jar="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars/classes.jar"
+        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/souriya/AndroidStudioProjects/MobileHealthApp/app/build/intermediates/pre-dexed/debug/classes-89380503f79f3c5112f3e79ab229016e168e4a0f.jar" />
+        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\classes-341baa40c4b867f8e4ecaa6471a4fd399005db3d.jar" />
+    </item>
+    <item
+        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-e9b57d2be1895c33464203635cd244586b1b4617.jar" />
+    </item>
+    <item
+        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-7162397f5794a875c4a150323e535873f97936f6.jar" />
     </item>
 
 </items>
