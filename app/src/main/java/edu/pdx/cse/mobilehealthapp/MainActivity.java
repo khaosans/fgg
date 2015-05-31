@@ -24,6 +24,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -38,7 +39,7 @@ public class MainActivity extends ActionBarActivity {
     private int score;
     private int pairNumber = 0;
     public final static String foodID = "01009";
-    public final static String apiKEY = "__";
+    public final static String apiKEY = "QqkqLPSUUjn5jSZvSyEdAkkhNwgLrbMYEbI249we";
     public final static String apiURL = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=" + foodID + "&type=b&format=xml&api_key=" + apiKEY;
 
     @Override
@@ -64,7 +65,9 @@ public class MainActivity extends ActionBarActivity {
     private LinkedList<Pair<FoodItem, FoodItem>> createComboList(LinkedList<FoodItem> foodlist) {
         for (int i = 0; i < foodlist.size(); ++i) {
             for (int j = 0; j < foodlist.size(); j++) {
-                pairOfFoodlist.add(new Pair<>(foodlist.get(i), foodlist.get(j)));
+                if (i != j) {
+                    pairOfFoodlist.add(new Pair<>(foodlist.get(i), foodlist.get(j)));
+                }
             }
         }
         return pairOfFoodlist;
@@ -74,7 +77,22 @@ public class MainActivity extends ActionBarActivity {
         return pairOfFoodlist.get(n);
     }
 
+    @TargetApi(Build.VERSION_CODES.KITKAT)
     private void setUpButton() {
+
+        InputStream in = getResources().openRawResource(R.raw.fooditems);
+        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
+        String line = null;
+        try {
+            line = reader.readLine();
+            while (line != null) {
+
+                line = reader.readLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         injectData();
         createComboList(foodlist);
 
@@ -158,11 +176,11 @@ public class MainActivity extends ActionBarActivity {
 
             //Now we need to parse the XML
             XmlPullParserFactory pullParserFactory;
-            try{
-              pullParserFactory = XmlPullParserFactory.newInstance();
+            try {
+                pullParserFactory = XmlPullParserFactory.newInstance();
                 XmlPullParser parser = pullParserFactory.newPullParser();
                 parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-                parser.setInput(input,null);
+                parser.setInput(input, null);
                 result = parseXML(parser);
                 System.out.println(result);
             } catch (XmlPullParserException e) {
@@ -176,29 +194,30 @@ public class MainActivity extends ActionBarActivity {
 
         /**
          * Uses a parser to extract the food name and calories from the
+         *
          * @param parser
          * @return
          * @throws XmlPullParserException
          * @throws IOException
          */
-        private FoodItem parseXML( XmlPullParser parser ) throws XmlPullParserException, IOException {
+        private FoodItem parseXML(XmlPullParser parser) throws XmlPullParserException, IOException {
             int eventType = parser.getEventType();
             String name = null;
             int cal = -1;
 
-            while( eventType!= XmlPullParser.END_DOCUMENT) {
-                if(eventType == XmlPullParser.START_TAG) {
+            while (eventType != XmlPullParser.END_DOCUMENT) {
+                if (eventType == XmlPullParser.START_TAG) {
                     //Gets the name of the food
-                    if(parser.getName().equals("food")) {
-                        if(parser.getAttributeName(1).equals("name")) {
+                    if (parser.getName().equals("food")) {
+                        if (parser.getAttributeName(1).equals("name")) {
                             System.out.println("name=" + parser.getAttributeValue(1));
                             name = parser.getAttributeValue(1);
                         }
                     }
                     //Gets the calories
                     if (parser.getName().equals("nutrient")) {
-                        if(parser.getAttributeValue(2).equals("kcal")) {
-                            System.out.println("kcal="+parser.getAttributeValue(3));
+                        if (parser.getAttributeValue(2).equals("kcal")) {
+                            System.out.println("kcal=" + parser.getAttributeValue(3));
                             cal = Integer.parseInt(parser.getAttributeValue(3));
                         }
                     }
