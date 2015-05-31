@@ -2,32 +2,32 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\classes-768bad02086217cdc546ac5fbd6e3ba2700773a9.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-ba4455bb09bd6bfc70ca496e7c99d81bc4c75a7b.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\classes-341baa40c4b867f8e4ecaa6471a4fd399005db3d.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Desktop\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-e9b57d2be1895c33464203635cd244586b1b4617.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\justin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\solus\Desktop\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-7162397f5794a875c4a150323e535873f97936f6.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-d6737325374a01ae8a497f32714efbd2c57fab59.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-0e061777213353d0cf9e7384d95a6e57bde07e8b.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-4ac197569df088ea05e9259828aa7484d9310fc4.jar" />
     </item>
 
 </items>
