@@ -21,7 +21,7 @@ public class MongoDB {
 
         DBCollection table = db.getCollection("FoodGuessingGameDB");
 
-        //table.drop();
+        table.drop();
 
         BasicDBObject document = new BasicDBObject();
         document.put("database", "Food Guessing Game");
