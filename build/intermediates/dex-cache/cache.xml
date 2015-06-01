@@ -2,32 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\classes-a407f6037134da873eae4a5015a59a689d1e86f7.jar" />
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\classes-8e4a23571fe56ce5ad666bf248d865316b77bbf6.jar" />
     </item>
     <item
-        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-7162397f5794a875c4a150323e535873f97936f6.jar" />
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\classes-6193b5d1b25e2d44f61ae62143c43f002b75a0a2.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-90fe028b513561a155611a0982ae0c5fa5726c5c.jar" />
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-85adc56b92899778e82f7cea4ac09bb7f61b6c13.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\classes-4ee1d7d8ec83a26a02ba827de18e04adb8c12533.jar" />
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-488a69b4e6d9993d5eaad98e9e791a2e9e671d38.jar" />
+    </item>
+    <item
+        jar="C:\Users\solus\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
+        <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-3e050668548fbdacd2718faa0cdf2f15e1df1395.jar" />
     </item>
 
 </items>

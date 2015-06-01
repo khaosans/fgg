@@ -96,7 +96,6 @@ public class MainActivity extends ActionBarActivity {
         injectData();
         createComboList(foodlist);
 
-
         Button button = (Button) findViewById(R.id.button);
         TextView textView = (TextView) findViewById(R.id.textView);
 
@@ -168,8 +167,6 @@ public class MainActivity extends ActionBarActivity {
                 URL url = new URL(urlString);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 input = new BufferedInputStream(connection.getInputStream());
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -183,9 +180,7 @@ public class MainActivity extends ActionBarActivity {
                 parser.setInput(input, null);
                 result = parseXML(parser);
                 System.out.println(result);
-            } catch (XmlPullParserException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
+            } catch (XmlPullParserException | IOException e) {
                 e.printStackTrace();
             }
 
@@ -245,8 +240,6 @@ public class MainActivity extends ActionBarActivity {
             while ((line = br.readLine()) != null) {
                 System.out.println(line);
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
