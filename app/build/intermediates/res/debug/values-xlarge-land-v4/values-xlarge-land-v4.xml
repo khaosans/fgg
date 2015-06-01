@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD:app/build/intermediates/res/debug/values-xlarge-land-v4/values-xlarge-land-v4.xml
     <!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-xlarge-land-v4/values.xml -->
+=======
+    <!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-xlarge-land/values.xml -->
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07:app/build/intermediates/res/debug/values-xlarge-land/values-xlarge-land.xml
     <eat-comment/>
     <dimen name="abc_search_view_text_min_width">256dip</dimen>
 </resources>

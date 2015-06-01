@@ -23,4 +23,8 @@
              android:src="?attr/actionModeCloseDrawable"
              style="?attr/actionModeCloseButtonStyle"
              android:layout_width="wrap_content"
+<<<<<<< HEAD
              android:layout_height="match_parent" /><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_action_mode_close_item_material.xml --><!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/layout/abc_action_mode_close_item_material.xml -->
+=======
+             android:layout_height="match_parent" /><!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_action_mode_close_item_material.xml -->
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07

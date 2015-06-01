@@ -30,6 +30,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.LinkedList;
 import java.util.Random;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -38,29 +42,39 @@ public class MainActivity extends ActionBarActivity {
     private LinkedList<Pair<FoodItem, FoodItem>> pairOfFoodlist = new LinkedList<>();
     private int score;
     private int pairNumber = 0;
-    public final static String foodID = "01009";
+    //public  String foodID = "01009";
     public final static String apiKEY = "QqkqLPSUUjn5jSZvSyEdAkkhNwgLrbMYEbI249we";
-    public final static String apiURL = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=" + foodID + "&type=b&format=xml&api_key=" + apiKEY;
+    public String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
+    public String baseApiURL2 = "&type=b&format=xml&api_key=";
+    public final int totalFoodItems = 50;
+
+    protected String createApiURL(String foodID) {
+        return baseApiURL1 + foodID + baseApiURL2 + apiKEY;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        setUpButton();
-    }
-
-    //example data
-    private void injectData() {
-        int max = 100;
-        int min = 1;
-        Random rn = new Random();
-
-        for (int i = 0; i <= 10; ++i) {
-            int randomNumber = rn.nextInt(max - min + 1) + min;
-            foodlist.add(new FoodItem(randomNumber + "", randomNumber));
+        setUpList();
+        // Waits until the list is populated
+        while (foodlist.size() < totalFoodItems) {
+            try {
+                new api().get(3000, TimeUnit.MILLISECONDS);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (TimeoutException e) {
+                e.printStackTrace();
+            }
         }
+        setUpButton();
+
+
     }
+
 
     private LinkedList<Pair<FoodItem, FoodItem>> createComboList(LinkedList<FoodItem> foodlist) {
         for (int i = 0; i < foodlist.size(); ++i) {
@@ -77,28 +91,11 @@ public class MainActivity extends ActionBarActivity {
         return pairOfFoodlist.get(n);
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     private void setUpButton() {
-
-        InputStream in = getResources().openRawResource(R.raw.fooditems);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(in));
-        String line = null;
-        try {
-            line = reader.readLine();
-            while (line != null) {
-
-                line = reader.readLine();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        injectData();
         createComboList(foodlist);
 
         Button button = (Button) findViewById(R.id.button);
         TextView textView = (TextView) findViewById(R.id.textView);
-
         textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
 
         TextView textView1 = (TextView) findViewById(R.id.textView2);
@@ -112,7 +109,7 @@ public class MainActivity extends ActionBarActivity {
                 textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
                 TextView textView1 = (TextView) findViewById(R.id.textView2);
                 textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
-                pairNumber += 10;
+                pairNumber += 1;
 
             }
         });
@@ -126,12 +123,15 @@ public class MainActivity extends ActionBarActivity {
                 textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
                 TextView textView1 = (TextView) findViewById(R.id.textView2);
                 textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
-                pairNumber += 10;
+                pairNumber += 1;
             }
 
         });
     }
 
+    public void setUpList() {
+        new api().execute();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -158,44 +158,55 @@ public class MainActivity extends ActionBarActivity {
     private class api extends AsyncTask<String, String, String> {
         @Override
         protected String doInBackground(String... strings) {
-            String urlString = strings[0];
-            InputStream input = null;
-            FoodItem result = null;
 
-            //HTTP Get
+            InputStream inputStream = null;
+            InputStream readerInput = getResources().openRawResource(R.raw.fooditems);
+            BufferedReader reader = new BufferedReader(new InputStreamReader(readerInput));
+            String line = null;
+
             try {
-                URL url = new URL(urlString);
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                input = new BufferedInputStream(connection.getInputStream());
+                line = reader.readLine();
+                while (line != null) {
+                    inputStream = get_inputStream(line);
+                    //Parse out the xml results
+                    XmlPullParserFactory pullParserFactory;
+                    try {
+                        //Parser setup
+                        pullParserFactory = XmlPullParserFactory.newInstance();
+                        XmlPullParser parser = pullParserFactory.newPullParser();
+                        parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+                        parser.setInput(inputStream, null);
+                        foodlist.add(parseXML(parser, line));
+                        line = reader.readLine();
+                    } catch (XmlPullParserException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                }
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            //Now we need to parse the XML
-            XmlPullParserFactory pullParserFactory;
-            try {
-                pullParserFactory = XmlPullParserFactory.newInstance();
-                XmlPullParser parser = pullParserFactory.newPullParser();
-                parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-                parser.setInput(input, null);
-                result = parseXML(parser);
-                System.out.println(result);
-            } catch (XmlPullParserException | IOException e) {
-                e.printStackTrace();
-            }
-
-            return "Hi";
+            return "";
         }
 
-        /**
-         * Uses a parser to extract the food name and calories from the
-         *
-         * @param parser
-         * @return
-         * @throws XmlPullParserException
-         * @throws IOException
-         */
-        private FoodItem parseXML(XmlPullParser parser) throws XmlPullParserException, IOException {
+        private InputStream get_inputStream(String line) {
+            try {
+                URL url = new URL(createApiURL(line));
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                return new BufferedInputStream(connection.getInputStream());
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+
+        // Uses a parser to extract the food name and calories and id
+        private FoodItem parseXML(XmlPullParser parser, String line) throws XmlPullParserException, IOException {
             int eventType = parser.getEventType();
             String name = null;
             int cal = -1;
@@ -216,37 +227,13 @@ public class MainActivity extends ActionBarActivity {
                             cal = Integer.parseInt(parser.getAttributeValue(3));
                         }
                     }
-
                 }
-
                 eventType = parser.next();
             }
-            return new FoodItem(name, cal);
+            return new FoodItem(name, cal, Integer.parseInt(line));
         }
-    }
-
-    /*
-       Calls the API service from the view
-     */
-    public void call_api(View view) {
-        new api().execute(apiURL);
-    }
-
-    @TargetApi(Build.VERSION_CODES.KITKAT)
-    public void buildList(View view) {
-        File file = new File("src/foodconfig.txt");
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
     }
 }
-
 
 
 

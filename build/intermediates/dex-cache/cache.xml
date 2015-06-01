@@ -2,6 +2,7 @@
 <items version="2" >
 
     <item
+<<<<<<< HEAD
         jar="C:\Users\solus\Downloads\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -35,6 +36,34 @@
         revision="21.1.2"
         sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
         <dex dex="C:\Users\solus\Downloads\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-3e050668548fbdacd2718faa0cdf2f15e1df1395.jar" />
+=======
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-4ac197569df088ea05e9259828aa7484d9310fc4.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-d6737325374a01ae8a497f32714efbd2c57fab59.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-0e061777213353d0cf9e7384d95a6e57bde07e8b.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-ba4455bb09bd6bfc70ca496e7c99d81bc4c75a7b.jar" />
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07
     </item>
 
 </items>
