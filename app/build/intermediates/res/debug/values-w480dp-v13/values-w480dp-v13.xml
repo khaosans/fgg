@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<<<<<<< HEAD:app/build/intermediates/res/debug/values-w480dp-v13/values-w480dp-v13.xml
+    <!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-w480dp-v13/values.xml -->
+=======
+    <!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-w480dp/values.xml -->
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07:app/build/intermediates/res/debug/values-w480dp/values-w480dp.xml
+    <eat-comment/>
+    <bool name="abc_action_bar_embed_tabs_pre_jb">true</bool>
+    <bool name="abc_config_allowActionMenuItemTextWithIcon">true</bool>
+</resources>

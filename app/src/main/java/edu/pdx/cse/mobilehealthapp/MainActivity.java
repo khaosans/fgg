@@ -51,6 +51,7 @@ public class MainActivity extends ActionBarActivity {
     protected String createApiURL(String foodID) {
         return baseApiURL1 + foodID + baseApiURL2 + apiKEY;
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +59,7 @@ public class MainActivity extends ActionBarActivity {
 
         setUpList();
         // Waits until the list is populated
-        while(foodlist.size() < totalFoodItems ) {
+        while (foodlist.size() < totalFoodItems) {
             try {
                 new api().get(3000, TimeUnit.MILLISECONDS);
             } catch (InterruptedException e) {
@@ -204,7 +205,6 @@ public class MainActivity extends ActionBarActivity {
         }
 
 
-
         // Uses a parser to extract the food name and calories and id
         private FoodItem parseXML(XmlPullParser parser, String line) throws XmlPullParserException, IOException {
             int eventType = parser.getEventType();
@@ -234,7 +234,6 @@ public class MainActivity extends ActionBarActivity {
         }
     }
 }
-
 
 
 

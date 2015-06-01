@@ -15,7 +15,10 @@
 -->
 
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_accelerated="false" android:color="@color/background_material_light" />
-    <item android:color="@android:color/transparent" />
+    <item android:color="@color/background_material_light" />
 </selector>
+<<<<<<< HEAD
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/color/abc_background_cache_hint_selector_material_light.xml --><!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/color/abc_background_cache_hint_selector_material_light.xml -->
+=======
 <!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/color/abc_background_cache_hint_selector_material_light.xml -->
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07

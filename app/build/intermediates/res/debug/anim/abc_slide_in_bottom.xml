@@ -17,4 +17,8 @@
            android:interpolator="@android:anim/decelerate_interpolator"
            android:fromYDelta="50%p" android:toYDelta="0"
            android:duration="@android:integer/config_mediumAnimTime"/>
+<<<<<<< HEAD
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/anim/abc_slide_in_bottom.xml --><!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/anim/abc_slide_in_bottom.xml -->
+=======
 <!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/anim/abc_slide_in_bottom.xml -->
+>>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07
