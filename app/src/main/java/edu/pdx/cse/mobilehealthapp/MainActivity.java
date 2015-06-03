@@ -28,6 +28,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.concurrent.ExecutionException;
@@ -84,6 +85,7 @@ public class MainActivity extends ActionBarActivity {
                 }
             }
         }
+        Collections.shuffle(pairOfFoodlist);
         return pairOfFoodlist;
     }
 

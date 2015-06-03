@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-port/values.xml -->
-=======
-    <!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-port/values.xml -->
->>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07
+    <!-- From: file:/C:/Users/solus/Documents/GitHub/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/values-port/values.xml -->
     <eat-comment/>
     <bool name="abc_action_bar_embed_tabs">false</bool>
 </resources>

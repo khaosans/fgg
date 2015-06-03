@@ -16,12 +16,12 @@ public class MongoDB {
 
     public void add(String pairID, String name1, String name2, Boolean pick1, Boolean pick2,Boolean isCorrect) throws UnknownHostException {
 
-        MongoClient mongoClient = new MongoClient("131.252.216.12",  27017);
+        MongoClient mongoClient = new MongoClient("capstonedd.cs.pdx.edu",  27017);
         DB db = mongoClient.getDB("test");
 
         DBCollection table = db.getCollection("FoodGuessingGameDB");
 
-        table.drop();
+        //table.drop();
 
         BasicDBObject document = new BasicDBObject();
         document.put("database", "Food Guessing Game");
@@ -42,6 +42,9 @@ public class MongoDB {
         while (cursor.hasNext()) {
             System.out.println(cursor.next());
         }
+    }
 
+    public static void main(String[] args) throws UnknownHostException {
+        new MongoDB().add("","","",true,true, true);
     }
 }

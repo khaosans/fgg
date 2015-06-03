@@ -33,7 +33,6 @@
         android:addStatesFromChildren="true"
         android:background="?attr/actionBarItemBackground">
 
-<<<<<<< HEAD
         <ImageView android:id="@+id/image"
             android:layout_width="32dip"
             android:layout_height="32dip"
@@ -70,7 +69,4 @@
     </FrameLayout>
 
 </view>
-<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_activity_chooser_view.xml --><!-- From: file:/C:/Users/solus/Downloads/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/layout/abc_activity_chooser_view.xml -->
-=======
-</android.support.v7.widget.LinearLayoutCompat><!-- From: file:/C:/Users/justin/Documents/tmp/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/layout/abc_activity_chooser_view.xml -->
->>>>>>> c1b69ea0ef80df7a1bc8eb9d116fd0629fa4ba07
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_activity_chooser_view.xml --><!-- From: file:/C:/Users/solus/Documents/GitHub/fgg/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/res/layout/abc_activity_chooser_view.xml -->
