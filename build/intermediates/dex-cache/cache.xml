@@ -2,39 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-dd2da55d8c52f69be60b31d28b7aa20e615611a0.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="C:\Users\justin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-488a69b4e6d9993d5eaad98e9e791a2e9e671d38.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-fc5f807623cd5a5c5ca8dc3aa35a54583896fdd8.jar" />
     </item>
     <item
-        jar="C:\Users\solus\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-019bc43cf83fe8a5054c954b9856771ff254f38a.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-3e050668548fbdacd2718faa0cdf2f15e1df1395.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-43424827063fd6da236acd77c2be1406d8c3761b.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-924ba9f58bb803e4419b327314a624ae9092f470.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-38478b53341d4a8006cbe5dcf20fb196ea1e8a87.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-ac3c0f91c0b415303fe996568471af95bda6493b.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-66a3bb317beb350bdec4417f9425ab13fde91dce.jar" />
     </item>
 
 </items>

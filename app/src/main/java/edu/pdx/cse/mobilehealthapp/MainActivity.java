@@ -1,8 +1,10 @@
 package edu.pdx.cse.mobilehealthapp;
 
 import android.annotation.TargetApi;
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.support.v4.util.Pair;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -57,7 +60,8 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ImageView iv = (ImageView) findViewById(R.id.imageView);
+        iv.setImageResource(R.drawable.logo);
         setUpList();
         // Waits until the list is populated
         while (foodlist.size() < totalFoodItems) {
@@ -96,39 +100,103 @@ public class MainActivity extends ActionBarActivity {
     private void setUpButton() {
         createComboList(foodlist);
 
-        Button button = (Button) findViewById(R.id.button);
+        Button button1 = (Button) findViewById(R.id.button);
         TextView textView = (TextView) findViewById(R.id.textView);
         textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
 
         TextView textView1 = (TextView) findViewById(R.id.textView2);
         textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
 
-        button.setOnClickListener(new MyOnClickListener(pairNumber) {
+        button1.setOnClickListener(new MyOnClickListener(pairNumber) {
             @Override
             public void onClick(View view) {
                 Log.i("DemoButtonApp111", "You clicked1");
-                TextView textView = (TextView) findViewById(R.id.textView);
-                textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
-                TextView textView1 = (TextView) findViewById(R.id.textView2);
-                textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
+                //Populate result fields
+                int cal1 = pairOfFoodlist.get(pairNumber).first.getCalories();
+                int cal2 = pairOfFoodlist.get(pairNumber).second.getCalories();
+                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
+                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
+
+                TextView tv = (TextView) findViewById(R.id.textAnswer);
+                TextView tv2 = (TextView) findViewById(R.id.textScore);
+                if(pairOfFoodlist.get(pairNumber).first.getCalories() <= pairOfFoodlist.get(pairNumber).second.getCalories()) {
+                    tv.setText("Correct!");
+                    score++;
+                } else {
+                    tv.setText("Incorrect...");
+                    score=0;
+                }
+                tv2.setText("Score: "+ score);
+
+                postClickCleanUp();
                 pairNumber += 1;
 
             }
         });
 
-        Button button1 = (Button) findViewById(R.id.button2);
-        button1.setOnClickListener(new View.OnClickListener() {
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("DemoButtonApp222", "You clicked2");
-                TextView textView = (TextView) findViewById(R.id.textView);
-                textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
-                TextView textView1 = (TextView) findViewById(R.id.textView2);
-                textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
+
+                //Populate result fields
+                int cal1 = pairOfFoodlist.get(pairNumber).first.getCalories();
+                int cal2 = pairOfFoodlist.get(pairNumber).second.getCalories();
+                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
+                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
+
+                //Calculate scores
+                TextView tv = (TextView) findViewById(R.id.textAnswer);
+                TextView tv2 = (TextView) findViewById(R.id.textScore);
+                if(pairOfFoodlist.get(pairNumber).first.getCalories() >= pairOfFoodlist.get(pairNumber).second.getCalories()) {
+                    tv.setText("Correct!");
+                    score++;
+                } else {
+                    tv.setText("Incorrect...");
+                    score = 0;
+                }
+                tv2.setText("Score: " + score);
+                postClickCleanUp();
                 pairNumber += 1;
             }
 
         });
+    }
+    public void postClickCleanUp() {
+        //Disable buttons
+        Button button1 = (Button) findViewById(R.id.button);
+        button1.setClickable(false);
+        Button button2 = (Button) findViewById(R.id.button2);
+        button2.setClickable(false);
+
+
+        new CountDownTimer(5000, 1000) {
+            TextView counterText = (TextView) findViewById(R.id.timer);
+            public void onTick(long millisUntilFinished) {
+
+                counterText.setText("Next Question in: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                //Re-hides cal count
+                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(""));
+                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(""));
+
+                counterText.setText("");
+                TextView textView = (TextView) findViewById(R.id.textView);
+                textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
+                TextView textView1 = (TextView) findViewById(R.id.textView2);
+                textView1.setText(pairOfFoodlist.get(pairNumber).second.getName());
+
+                //Re-enable buttons
+                Button button1 = (Button) findViewById(R.id.button);
+                button1.setClickable(true);
+                Button button2 = (Button) findViewById(R.id.button2);
+                button2.setClickable(true);
+            }
+        }.start();
+
     }
 
     public void setUpList() {

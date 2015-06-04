@@ -2,4 +2,5 @@
     <string name="app_name">MobileHealthApp</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <color name="background">#81F79F</color>
 </resources>
