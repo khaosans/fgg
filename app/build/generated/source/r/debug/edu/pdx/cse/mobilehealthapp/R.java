@@ -1510,6 +1510,8 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f02003a;
     }
     public static final class id {
+        public static final int AnswerCal1=0x7f0d0056;
+        public static final int AnswerCal2=0x7f0d0057;
         public static final int action_bar=0x7f0d0040;
         public static final int action_bar_activity_content=0x7f0d0000;
         public static final int action_bar_container=0x7f0d003f;
@@ -1523,14 +1525,13 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d003d;
         public static final int action_mode_bar_stub=0x7f0d003c;
         public static final int action_mode_close_button=0x7f0d0025;
-        public static final int action_settings=0x7f0d0055;
+        public static final int action_settings=0x7f0d0059;
         public static final int activity_chooser_view_content=0x7f0d0026;
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d0016;
         public static final int beginning=0x7f0d0013;
         public static final int button=0x7f0d0050;
         public static final int button2=0x7f0d0051;
-        public static final int button3=0x7f0d0052;
         public static final int buttonPanel=0x7f0d0036;
         public static final int checkbox=0x7f0d0038;
         public static final int collapseActionView=0x7f0d0017;
@@ -1586,9 +1587,12 @@ containing a value of this type.
         public static final int src_over=0x7f0d0022;
         public static final int submit_area=0x7f0d004b;
         public static final int tabMode=0x7f0d000b;
+        public static final int textAnswer=0x7f0d0054;
+        public static final int textScore=0x7f0d0055;
         public static final int textSpacerNoButtons=0x7f0d0033;
-        public static final int textView=0x7f0d0053;
-        public static final int textView2=0x7f0d0054;
+        public static final int textView=0x7f0d0052;
+        public static final int textView2=0x7f0d0053;
+        public static final int timer=0x7f0d0058;
         public static final int title=0x7f0d002c;
         public static final int title_template=0x7f0d002f;
         public static final int topPanel=0x7f0d002e;
