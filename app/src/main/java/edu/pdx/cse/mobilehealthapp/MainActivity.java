@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -59,15 +60,10 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        ImageView iv = (ImageView) findViewById(R.id.imageView);
+        iv.setImageResource(R.drawable.logo);
         setUpList();
         // Waits until the list is populated
-
-        ProgressDialog progress = new ProgressDialog(this);
-        progress.setTitle("Loading");
-        progress.setMessage("Wait while loading...");
-        progress.show();
-
         while (foodlist.size() < totalFoodItems) {
             try {
                 new api().get(3000, TimeUnit.MILLISECONDS);
@@ -80,7 +76,6 @@ public class MainActivity extends ActionBarActivity {
             }
         }
         setUpButton();
-        progress.dismiss();
 
 
     }
