@@ -1,5 +1,5 @@
 #idea files
-*.idea
+.idea
  Built application files
 *.apk
 *.ap_
