@@ -45,11 +45,14 @@ public class MainActivity extends ActionBarActivity {
     private LinkedList<FoodItem> foodlist = new LinkedList<>();
     private LinkedList<Pair<FoodItem, FoodItem>> pairOfFoodlist = new LinkedList<>();
     private int score;
+    private int highScore = 0;
+
     private int pairNumber = 0;
-    //public  String foodID = "01009";
+
     public final static String apiKEY = "QqkqLPSUUjn5jSZvSyEdAkkhNwgLrbMYEbI249we";
     public String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
     public String baseApiURL2 = "&type=b&format=xml&api_key=";
+
     public final int totalFoodItems = 50;
 
     protected String createApiURL(String foodID) {
@@ -117,16 +120,22 @@ public class MainActivity extends ActionBarActivity {
                 ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
                 ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
 
+                //Calculate scores
                 TextView tv = (TextView) findViewById(R.id.textAnswer);
                 TextView tv2 = (TextView) findViewById(R.id.textScore);
+                TextView tv3 = (TextView) findViewById(R.id.textHighScore);
+
                 if(pairOfFoodlist.get(pairNumber).first.getCalories() <= pairOfFoodlist.get(pairNumber).second.getCalories()) {
                     tv.setText("Correct!");
                     score++;
+                    highScore = (score > highScore) ? score : highScore;
                 } else {
                     tv.setText("Incorrect...");
+                    highScore = (score > highScore) ? score : highScore;
                     score=0;
                 }
-                tv2.setText("Score: "+ score);
+                tv2.setText("Score: " + score);
+                tv3.setText("High Score: " + highScore);
 
                 postClickCleanUp();
                 pairNumber += 1;
@@ -149,14 +158,20 @@ public class MainActivity extends ActionBarActivity {
                 //Calculate scores
                 TextView tv = (TextView) findViewById(R.id.textAnswer);
                 TextView tv2 = (TextView) findViewById(R.id.textScore);
+                TextView tv3 = (TextView) findViewById(R.id.textHighScore);
+
                 if(pairOfFoodlist.get(pairNumber).first.getCalories() >= pairOfFoodlist.get(pairNumber).second.getCalories()) {
                     tv.setText("Correct!");
                     score++;
+                    highScore = (score > highScore) ? score : highScore;
                 } else {
                     tv.setText("Incorrect...");
+                    highScore = (score > highScore) ? score : highScore;
                     score = 0;
                 }
                 tv2.setText("Score: " + score);
+                tv3.setText("High Score: " + highScore);
+
                 postClickCleanUp();
                 pairNumber += 1;
             }
@@ -179,11 +194,13 @@ public class MainActivity extends ActionBarActivity {
             }
 
             public void onFinish() {
-                //Re-hides cal count
-                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(""));
-                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(""));
-
+                //Re-hides cal count and te incorrect/correct answer text
+                ((TextView)findViewById(R.id.AnswerCal1)).setText("");
+                ((TextView)findViewById(R.id.AnswerCal2)).setText("");
+                ((TextView)findViewById(R.id.textAnswer)).setText("");
                 counterText.setText("");
+
+                //Sets the next set of items
                 TextView textView = (TextView) findViewById(R.id.textView);
                 textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
                 TextView textView1 = (TextView) findViewById(R.id.textView2);

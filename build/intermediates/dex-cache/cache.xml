@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\justin\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
+        jar="C:\Users\justin\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-fc5f807623cd5a5c5ca8dc3aa35a54583896fdd8.jar" />
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-987da4e1372adbb87a5fb9f1c5204087553e5efe.jar" />
     </item>
     <item
         jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
@@ -16,18 +16,18 @@
         <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\classes-019bc43cf83fe8a5054c954b9856771ff254f38a.jar" />
     </item>
     <item
-        jar="C:\Users\justin\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
-        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-43424827063fd6da236acd77c2be1406d8c3761b.jar" />
-    </item>
-    <item
         jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
         <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-ac3c0f91c0b415303fe996568471af95bda6493b.jar" />
+    </item>
+    <item
+        jar="C:\Users\justin\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
+        <dex dex="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-43424827063fd6da236acd77c2be1406d8c3761b.jar" />
     </item>
     <item
         jar="C:\Users\justin\Documents\tmp\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"

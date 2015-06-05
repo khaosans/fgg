@@ -420,7 +420,7 @@ int id action_menu_presenter 0x7f0d0003
 int id action_mode_bar 0x7f0d003d
 int id action_mode_bar_stub 0x7f0d003c
 int id action_mode_close_button 0x7f0d0025
-int id action_settings 0x7f0d005a
+int id action_settings 0x7f0d005b
 int id activity_chooser_view_content 0x7f0d0026
 int id alertTitle 0x7f0d0030
 int id always 0x7f0d0016
@@ -484,6 +484,7 @@ int id src_over 0x7f0d0022
 int id submit_area 0x7f0d004b
 int id tabMode 0x7f0d000b
 int id textAnswer 0x7f0d0054
+int id textHighScore 0x7f0d005a
 int id textScore 0x7f0d0055
 int id textSpacerNoButtons 0x7f0d0033
 int id textView 0x7f0d0052

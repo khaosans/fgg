@@ -1527,7 +1527,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0d003d;
         public static final int action_mode_bar_stub=0x7f0d003c;
         public static final int action_mode_close_button=0x7f0d0025;
-        public static final int action_settings=0x7f0d005a;
+        public static final int action_settings=0x7f0d005b;
         public static final int activity_chooser_view_content=0x7f0d0026;
         public static final int alertTitle=0x7f0d0030;
         public static final int always=0x7f0d0016;
@@ -1591,6 +1591,7 @@ containing a value of this type.
         public static final int submit_area=0x7f0d004b;
         public static final int tabMode=0x7f0d000b;
         public static final int textAnswer=0x7f0d0054;
+        public static final int textHighScore=0x7f0d005a;
         public static final int textScore=0x7f0d0055;
         public static final int textSpacerNoButtons=0x7f0d0033;
         public static final int textView=0x7f0d0052;
