@@ -50,8 +50,8 @@ public class MainActivity extends ActionBarActivity {
     private int pairNumber = 0;
 
     public final static String apiKEY = "QqkqLPSUUjn5jSZvSyEdAkkhNwgLrbMYEbI249we";
-    public String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
-    public String baseApiURL2 = "&type=b&format=xml&api_key=";
+    public final String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
+    public final String baseApiURL2 = "&type=b&format=xml&api_key=";
 
     public final int totalFoodItems = 50;
 
