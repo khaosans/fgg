@@ -2,9 +2,11 @@ package edu.pdx.cse.mobilehealthapp;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.CountDownTimer;
+import android.os.Environment;
 import android.support.v4.util.Pair;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -22,12 +25,16 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -45,14 +52,11 @@ public class MainActivity extends ActionBarActivity {
     private LinkedList<FoodItem> foodlist = new LinkedList<>();
     private LinkedList<Pair<FoodItem, FoodItem>> pairOfFoodlist = new LinkedList<>();
     private int score;
-    private int highScore = 0;
-
     private int pairNumber = 0;
-
+    //public  String foodID = "01009";
     public final static String apiKEY = "QqkqLPSUUjn5jSZvSyEdAkkhNwgLrbMYEbI249we";
-    public final String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
-    public final String baseApiURL2 = "&type=b&format=xml&api_key=";
-
+    public String baseApiURL1 = "http://api.nal.usda.gov/usda/ndb/reports/?ndbno=";
+    public String baseApiURL2 = "&type=b&format=xml&api_key=";
     public final int totalFoodItems = 50;
 
     protected String createApiURL(String foodID) {
@@ -100,6 +104,44 @@ public class MainActivity extends ActionBarActivity {
         return pairOfFoodlist.get(n);
     }
 
+
+    public void writeToFile(String sFileName, String sBody) throws IOException {
+        try {
+
+            OutputStreamWriter out = new OutputStreamWriter(openFileOutput("data.txt", MODE_APPEND));
+            String text = "teststring";
+            out.write(text);
+            out.write('\n');
+            out.close();
+            Toast.makeText(this, "The contents are saved in the file.", Toast.LENGTH_LONG).show();
+
+        } catch (Throwable t) {
+
+            Toast.makeText(this, "Exception: " + t.toString(), Toast.LENGTH_LONG).show();
+
+        }
+        //Toast.makeText(this, "Save not implemented yet.", Toast.LENGTH_SHORT).show();
+
+            /*File root = new File("data.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(root));
+            Log.i(root.getName(),"test");
+            bufferedWriter.write("test1");
+            bufferedWriter.write("test2");
+            bufferedWriter.close();
+
+            Log.i(getFilesDir().toString(), "getFilesDir");
+            File root = new File("data.txt");
+            if (!root.exists()) {
+                root.mkdirs();
+            }
+            Log.i("DemoButtonApp111", "You clicked1");
+            File gpxfile = new File(root, sFileName);
+            FileWriter writer = new FileWriter(gpxfile);
+            writer.append(sBody);
+            writer.flush();
+            writer.close();*/
+    }
+
     private void setUpButton() {
         createComboList(foodlist);
 
@@ -113,29 +155,31 @@ public class MainActivity extends ActionBarActivity {
         button1.setOnClickListener(new MyOnClickListener(pairNumber) {
             @Override
             public void onClick(View view) {
-                Log.i("DemoButtonApp111", "You clicked1");
+                boolean correct = false;
                 //Populate result fields
                 int cal1 = pairOfFoodlist.get(pairNumber).first.getCalories();
                 int cal2 = pairOfFoodlist.get(pairNumber).second.getCalories();
-                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
-                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
+                ((TextView) findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
+                ((TextView) findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
 
-                //Calculate scores
                 TextView tv = (TextView) findViewById(R.id.textAnswer);
                 TextView tv2 = (TextView) findViewById(R.id.textScore);
-                TextView tv3 = (TextView) findViewById(R.id.textHighScore);
-
-                if(pairOfFoodlist.get(pairNumber).first.getCalories() <= pairOfFoodlist.get(pairNumber).second.getCalories()) {
+                if (pairOfFoodlist.get(pairNumber).first.getCalories() <= pairOfFoodlist.get(pairNumber).second.getCalories()) {
                     tv.setText("Correct!");
+                    correct = true;
                     score++;
-                    highScore = (score > highScore) ? score : highScore;
                 } else {
                     tv.setText("Incorrect...");
-                    highScore = (score > highScore) ? score : highScore;
-                    score=0;
+                    score = 0;
                 }
                 tv2.setText("Score: " + score);
-                tv3.setText("High Score: " + highScore);
+
+
+                String sb = pairOfFoodlist.get(pairNumber).first.getName() + "," + cal1 + ",";
+                String sb1 = pairOfFoodlist.get(pairNumber).second.getName() + "," + cal2 + ",";
+                String sb3 = String.valueOf(correct);
+                Log.i("UserOutput", sb + sb1 + sb3);
+
 
                 postClickCleanUp();
                 pairNumber += 1;
@@ -147,37 +191,42 @@ public class MainActivity extends ActionBarActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i("DemoButtonApp222", "You clicked2");
 
+                boolean correct = false;
                 //Populate result fields
                 int cal1 = pairOfFoodlist.get(pairNumber).first.getCalories();
                 int cal2 = pairOfFoodlist.get(pairNumber).second.getCalories();
-                ((TextView)findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
-                ((TextView)findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
+                ((TextView) findViewById(R.id.AnswerCal1)).setText(String.valueOf(cal1));
+                ((TextView) findViewById(R.id.AnswerCal2)).setText(String.valueOf(cal2));
 
                 //Calculate scores
                 TextView tv = (TextView) findViewById(R.id.textAnswer);
                 TextView tv2 = (TextView) findViewById(R.id.textScore);
-                TextView tv3 = (TextView) findViewById(R.id.textHighScore);
-
-                if(pairOfFoodlist.get(pairNumber).first.getCalories() >= pairOfFoodlist.get(pairNumber).second.getCalories()) {
+                if (pairOfFoodlist.get(pairNumber).first.getCalories() >= pairOfFoodlist.get(pairNumber).second.getCalories()) {
                     tv.setText("Correct!");
+                    correct = true;
                     score++;
-                    highScore = (score > highScore) ? score : highScore;
                 } else {
                     tv.setText("Incorrect...");
-                    highScore = (score > highScore) ? score : highScore;
                     score = 0;
                 }
-                tv2.setText("Score: " + score);
-                tv3.setText("High Score: " + highScore);
 
+                String sb = pairOfFoodlist.get(pairNumber).first.getName() + "," + cal1 + ",";
+                String sb1 = pairOfFoodlist.get(pairNumber).second.getName() + "," + cal2 + ",";
+                String sb3 = String.valueOf(correct);
+                Log.i("UserOutput", sb + sb1 + sb3);
+
+
+                tv2.setText("Score: " + score);
                 postClickCleanUp();
+
+
                 pairNumber += 1;
             }
 
         });
     }
+
     public void postClickCleanUp() {
         //Disable buttons
         Button button1 = (Button) findViewById(R.id.button);
@@ -188,19 +237,18 @@ public class MainActivity extends ActionBarActivity {
 
         new CountDownTimer(5000, 1000) {
             TextView counterText = (TextView) findViewById(R.id.timer);
+
             public void onTick(long millisUntilFinished) {
 
                 counterText.setText("Next Question in: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
-                //Re-hides cal count and te incorrect/correct answer text
-                ((TextView)findViewById(R.id.AnswerCal1)).setText("");
-                ((TextView)findViewById(R.id.AnswerCal2)).setText("");
-                ((TextView)findViewById(R.id.textAnswer)).setText("");
-                counterText.setText("");
+                //Re-hides cal count
+                ((TextView) findViewById(R.id.AnswerCal1)).setText(String.valueOf(""));
+                ((TextView) findViewById(R.id.AnswerCal2)).setText(String.valueOf(""));
 
-                //Sets the next set of items
+                counterText.setText("");
                 TextView textView = (TextView) findViewById(R.id.textView);
                 textView.setText(pairOfFoodlist.get(pairNumber).first.getName());
                 TextView textView1 = (TextView) findViewById(R.id.textView2);

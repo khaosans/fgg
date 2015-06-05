@@ -1,11 +1,16 @@
 package edu.pdx.cse.mobilehealthapp;
 
+import android.widget.Toast;
+
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.MongoClient;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.UnknownHostException;
 
 /**
@@ -13,8 +18,28 @@ import java.net.UnknownHostException;
  */
 public class MongoDB {
 
+    public static void generateNoteOnSD(String sFileName, String sBody){
+        try
+        {
+            File root = new File("data.txt");
+            if (!root.exists()) {
+                root.mkdirs();
+            }
+            File gpxfile = new File(root, sFileName);
+            FileWriter writer = new FileWriter(gpxfile);
+            writer.append(sBody);
+            writer.flush();
+            writer.close();
+        }
+        catch(IOException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 
     public void add(String pairID, String name1, String name2, Boolean pick1, Boolean pick2,Boolean isCorrect) throws UnknownHostException {
+
 
         MongoClient mongoClient = new MongoClient("capstonedd.cs.pdx.edu",  27017);
         DB db = mongoClient.getDB("test");
@@ -45,6 +70,6 @@ public class MongoDB {
     }
 
     public static void main(String[] args) throws UnknownHostException {
-        new MongoDB().add("","","",true,true, true);
+       generateNoteOnSD("","sasdfasdt");
     }
 }
