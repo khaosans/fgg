@@ -15,10 +15,14 @@ env:
 # General Android settings used in builds
     - ANDROID_TARGET=android-21
     - ANDROID_ABI=armeabi-v7a
+    - ANDROID_HOME=${TRAVIS_BUILD_DIR}/android-sdk
+    - PATH=${ANDROID_HOME}/:${ANDROID_HOME}/tools/:${ANDROID_HOME}/platform-tools/:${PATH}
+
 
 before_install:
 # Making sure gradlew has executable permissions
     - chmod +x gradlew
+    - cp -R /usr/local/android-sdk-23.0.2 ./android-sdk
 
 android:
   components:
@@ -55,4 +59,3 @@ addons:
     build_command: "./gradlew build"
     branch_pattern: master
 
-    
