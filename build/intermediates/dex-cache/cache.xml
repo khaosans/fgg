@@ -2,186 +2,39 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\7.5.0\jars\classes.jar"
+        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="6836d188602ec5382d1967c58b00960eb8ff8773">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-e2a08281327feddfe5264652cdb1ed6e5efefffd.jar" />
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-7e3df598b8f5208c63b7bca16651bb6f5ee1d8e9.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\7.5.0\jars\classes.jar"
+        jar="C:\Users\solus\.gradle\caches\modules-2\files-2.1\junit\junit\4.12\2973d150c0dc1fefe998f834810d68f278ea58ec\junit-4.12.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="a172852a35ff919e85b9b7f14bbc15c5bee25520">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-b09a857b1d75d88ebf2c44d3ae7e6cffd67b2827.jar" />
+        sha1="2973d150c0dc1fefe998f834810d68f278ea58ec">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\androidTest\debug\junit-4.12-91ea655fd18f16faada8e4b077011b2899aad3e4.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\7.5.0\jars\classes.jar"
+        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e7b35244f50663b3f8d150714bca9ecd7a290da1">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-25616bb2cb0e367f8af544da4c47019648cbd3e8.jar" />
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-d2b3bb4d297e78bf13f2ab96cad98b66fec9aa3d.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\7.5.0\jars\classes.jar"
+        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f02127a85abd52a2cd526d4c2409f21969f80ee8">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-852aeb47cec2e9043ffe2b1fd9a82fc51ed032be.jar" />
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-66a9338a3f582a2a63527258c1acc79f65cbc2d0.jar" />
     </item>
     <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\7.5.0\jars\classes.jar"
+        jar="C:\Users\solus\.gradle\caches\modules-2\files-2.1\org.hamcrest\hamcrest-core\1.3\42a25dc3219429f0e5d060061f71acb49bf010a0\hamcrest-core-1.3.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="63ec6e9f4fe5482a7447d0f3091b8e543a02554c">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-774362be5830a06837aa1cefa049a02d4e450054.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="8d736fefa22d896e84a268354b3ed48a42663150">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-ecdfb1baeb71d8805a7aa24038606b330a0a0700.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a1372c17fccacca753d3951d3ad820571cbce075">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-26ec4511d804ce5f71a89d1384b7c0ff00b2b6de.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="02bac2dc792d78241077861566f2c82da955e7fa">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-fac96494af1aaaf076caa9552c107b4f3a1b6a1a.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="272bc5d7063f24bc3a33ea1d318cde8f31f5ec4c">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-f7e3d56d83c5595921f6ba7dcc522af2dcbe78a7.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d405025c600055237c171a0bbabaa49d69696573">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-12f632e9d240253018c123a5d1439519dc0ddef2.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6440e5e5cfe368f9bff3c537fb8988048069cb33">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-39f1154daf4715637b7282557e4dcd83d3aa12d6.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="69dd177337ead693c408c8dddc9546bb6f1244fa">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-dd3b11e8d73a7b8476d05b2dfe257a6bc6d8ea71.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="29ebc7e04d877062317c8cc0e68b20f0c1fcda66">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-01831f83055b35eb0e01a88d945c56946d0b4b4a.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="06a42becc33232ec0ee125161da68c1829c9f8fd">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-c17fd005940bddc9dbd842de2754b5922c29efd9.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appstate\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="68c140702c7242d914655bcb3164d9e8c45b84cb">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-2b5f7caa64662492ca1d282992125353316a9e05.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="8e3a972f28b8bae817e382257ba177a31bcadbbc">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-6160d811739ce7376308e7f859123e9ffcaf24d9.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\22.0.0\jars\libs\internal_impl-22.0.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ba3df4eb0a630d7de294f0e48d3f9267d279b784">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-863e3180c14e03517cb73886128782b075c7f0f4.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-924ba9f58bb803e4419b327314a624ae9092f470.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a78183f30e769a98ab4820794f597763088d3065">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-dd087378cec411113ad7329023d86d1399d20ce5.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1a6411087ab88ce5542f593e63a2752b6b0d6f1a">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-1a322e854013e399e6623a2ed9e2e9f7050dae9c.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="ba207be21987c11b37d9f8faa08ed6e722569f30">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-5ef3e502214e5986869b32289224932be4834331.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f44d03c138cb6488fdbaa65e3a7e5878861a56d8">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-13975818779a7fc4881db1b69525a7d9d3e06b99.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-dd2da55d8c52f69be60b31d28b7aa20e615611a0.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\7.5.0\jars\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="1e98ef3f124bb7a11f8575f9ff5dfea330b61b6f">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-51dbd0323cd497209faa5ad505d061f212a035bb.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.1.1\jars\libs\internal_impl-22.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\internal_impl-22.1.1-38478b53341d4a8006cbe5dcf20fb196ea1e8a87.jar" />
-    </item>
-    <item
-        jar="C:\Users\solus\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.1.1\support-annotations-22.1.1.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
-        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\support-annotations-22.1.1-488a69b4e6d9993d5eaad98e9e791a2e9e671d38.jar" />
+        sha1="42a25dc3219429f0e5d060061f71acb49bf010a0">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\androidTest\debug\hamcrest-core-1.3-621a2f717df06e3a7496403f3a2d22ee7b6b6e47.jar" />
     </item>
     <item
         jar="C:\Users\solus\.gradle\caches\modules-2\files-2.1\org.mongodb\mongo-java-driver\2.12.3\12b7358a7740af71a4a52349d014d526a7a26a65\mongo-java-driver-2.12.3.jar"
@@ -189,6 +42,13 @@
         revision="21.1.2"
         sha1="12b7358a7740af71a4a52349d014d526a7a26a65">
         <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\mongo-java-driver-2.12.3-3e050668548fbdacd2718faa0cdf2f15e1df1395.jar" />
+    </item>
+    <item
+        jar="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\solus\Documents\GitHub\fgg\app\build\intermediates\pre-dexed\debug\classes-ffd5e44544ad549c018ecb9aafb6cc2edda909fb.jar" />
     </item>
 
 </items>
