@@ -18,3 +18,6 @@ Filter out the log by typing in "userout" to filter out everything else.
 06-05 02:34:37.193    4832-4832/edu.pdx.cse.mobilehealthapp I/UserOutput﹕ BURGER KING, Chicken Strips,292,WENDY'S, Homestyle Chicken Fillet Sandwich,214,false
 06-05 02:34:44.739    4832-4832/edu.pdx.cse.mobilehealthapp I/UserOutput﹕ BURGER KING, Onion Rings,417,McDONALD'S Bacon Ranch Salad with Crispy Chicken,122,true
 ```
+
+
+
