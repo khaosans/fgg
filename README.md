@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/khaosans/fgg.svg?branch=test_cases)](https://travis-ci.org/khaosans/fgg)
+
 # fgg
 food guessing game
 
