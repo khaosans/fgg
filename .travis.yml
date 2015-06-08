@@ -22,7 +22,6 @@ env:
 before_install:
 # Making sure gradlew has executable permissions
     - chmod +x gradlew
-    - cp -R /usr/local/android-sdk-23.0.2 ./android-sdk
 
 android:
   components:
