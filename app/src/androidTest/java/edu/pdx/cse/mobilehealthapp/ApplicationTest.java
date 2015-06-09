@@ -10,4 +10,12 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);
     }
+
+    public void testFoodItem() {
+        FoodItem foodItem = new FoodItem("Name",132,112002);
+        assertNotNull(foodItem);
+        assertEquals(foodItem.getName(),"Name");
+        assertEquals(foodItem.getCalories(),132);
+        assertEquals(foodItem.getId(), 112002);
+    }
 }
